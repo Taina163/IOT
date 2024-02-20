@@ -1,0 +1,98 @@
+Camilla e Tainá
+
+// C++ code
+//
+
+int aleatorio;
+
+void setup()
+{
+  for(int i=0; i<13;  i++){
+  pinMode(i, OUTPUT);
+
+  Serial.begin(9600);
+  randomSeed(analogRead(0));
+  }
+}
+             
+void loop()
+{
+ 
+ 	  aleatorio = random(100);   
+  	  Serial.println(aleatorio);
+  
+ 	 if(aleatorio == 13) {
+       if(digitalRead(13) == 0){
+    	digitalWrite(13, HIGH);
+        tone(7, 200);
+        delay(500);
+        noTone(7);
+       }}
+  
+ 	 if(aleatorio == 12) {
+       if(digitalRead(12) == 0){
+    	digitalWrite(12, HIGH);
+        tone(7, 400);
+        delay(500);
+        noTone(7);
+       }}
+     if(aleatorio == 11) {
+       if(digitalRead(11) == 0){
+    	digitalWrite(11, HIGH);
+        tone(7, 600);
+        delay(500);
+        noTone(7);
+       }}
+   	 if(aleatorio == 10) {
+       if(digitalRead(10) == 0){
+    	digitalWrite(10, HIGH);
+        tone(7, 800);
+        delay(500);
+        noTone(7);
+       }}
+     if(aleatorio == 9) {
+       if(digitalRead(9) == 0){
+    	digitalWrite(9, HIGH);
+        tone(7, 1000);
+        delay(500);
+        noTone(7);
+       }}
+   	 if(aleatorio == 8) {
+       if(digitalRead(8) == 0){
+    	digitalWrite(8, HIGH);
+        tone(7, 1200);
+        delay(500);
+        noTone(7);
+       }}
+   	 if(aleatorio == 6) {
+       if(digitalRead(6) == 0){
+    	digitalWrite(6, HIGH);
+        tone(7, 1400);
+        delay(500);
+        noTone(7);
+       }}
+   	 if(aleatorio == 5) {
+       if(digitalRead(5) == 0){
+    	digitalWrite(5, HIGH);
+        tone(7, 1600);
+        delay(500);
+        noTone(7);
+       }}
+   	 if(aleatorio == 4) {
+       if(digitalRead(4) == 0){
+    	digitalWrite(4, HIGH);
+        tone(7, 1800);
+        delay(500);
+        noTone(7);
+       }
+	}
+   	 if(aleatorio == 3) {
+       if(digitalRead(3) == 0){
+    	digitalWrite(3, HIGH);
+        tone(7, 2000);
+        delay(500);
+        noTone(7);
+       }}
+	
+}
+

@@ -1,0 +1,98 @@
+char op;
+char status;
+int s1,s2,s3,s4,s5,s6;
+
+void setup()
+{
+    pinMode(2, OUTPUT);
+    pinMode(3, OUTPUT);
+    pinMode(4, OUTPUT);
+    pinMode(5, OUTPUT);
+    pinMode(6, OUTPUT);
+    pinMode(7, OUTPUT);
+    Serial.begin(9600);
+  }
+  
+  //oii professor, tudo bem? então tem algum erro nesse printl mas 
+  //eu não sei qual seria ele.
+  //ps:obtive ajuda para fazer, mas como o senhor tem bom coração, não leve em consideração.
+  Serial.println("digite sua cor:");
+  Serial.println("1-Branco");
+  Serial.println("2-Amarelo");
+  Serial.println("3-Laranja");
+  Serial.println("4-Azul");
+  Serial.println("5-Vermelho");
+  Serial.println("6-Branco");
+  
+  s1 = 0;
+  s2 = 0;
+  s3 = 0;
+  s4 = 0;
+  s5 = 0;
+  s6 = 0;
+}
+
+void loop()
+{
+  status = Serial.read();
+  
+  
+  if(status == '1'){
+    if(s1 == 0){
+    digitalWrite(2,HIGH);
+    s1++;
+    } else if(s1 == 1){
+    	digitalWrite(2,LOW);
+    	s1--;  
+    }
+  }
+  if(status == '2'){
+  	if(s2 == 0){
+    digitalWrite(3,HIGH);
+    S2++;
+    } else if(s2 == 1){
+    	digitalWrite(3,LOW);
+    	s2--;  
+    }
+  }
+  
+  if(status == '3'){
+  	if(s3 == 0){
+    digitalWrite(4,HIGH);
+    s3++;
+    } else if(s3 == 1){
+    	digitalWrite(4,LOW);
+    	s3--;  
+    }
+  }
+  
+  if(status == '4'){
+  	if(s4 == 0){
+    digitalWrite(5,HIGH);
+    s4++;
+    } else if(s4 == 1){
+    	digitalWrite(5,LOW);
+    	S4--;  
+    }
+  }
+  
+  if(status == '5'){
+  	if(s5 == 0){
+    digitalWrite(6,HIGH);
+    s5++;
+    } else if(S5 == 1){
+    	digitalWrite(6,LOW);
+    	s5--;  
+    }
+  }
+  
+  if(status == '6'){
+  	if(s6 == 0){
+    digitalWrite(7,HIGH);
+    s6++;
+    } else if(s6 == 1){
+    	digitalWrite(7,LOW);
+    	s6--;  
+    }
+  }
+}

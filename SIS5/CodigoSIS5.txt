@@ -1,0 +1,64 @@
+float tempo;
+float distancia;
+
+void setup()
+{
+  for(int i=4; i<=10; i++){
+    pinMode(i, OUTPUT);
+  }
+  pinMode(2,INPUT);
+  pinMode(3,OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  digitalWrite(3,HIGH);
+  delayMicroseconds(10);
+  digitalWrite(3,LOW);
+  tempo = pulseIn(2,HIGH);
+  distancia = (tempo/58.2);
+
+if (distancia>0 && distancia<110){
+    digitalWrite(4, HIGH);
+    digitalWrite(5, HIGH);
+    noTone(10);
+    delay(300);
+    tone(10, 1200);
+    delay(500);
+  }
+   else if (distancia>110){
+  	digitalWrite(4, LOW);
+    digitalWrite(5, LOW);
+  }
+  
+    
+  if(distancia>110 && distancia<220){
+  	digitalWrite(6, HIGH);
+    digitalWrite(7, HIGH);
+    noTone(10);
+    delay(650);
+    tone(10, 1000);
+    delay(750);
+  }
+   else if(distancia>220){
+  	digitalWrite(6, LOW);
+    digitalWrite(7, LOW);
+  }
+  
+   if(distancia>220 && distancia<300){
+  	digitalWrite(8, HIGH);
+    digitalWrite(9, HIGH);
+    noTone(10);
+    delay(750);
+    tone(10, 800);
+    delay(1000);
+  }
+   else if (distancia>300){
+    digitalWrite(8, LOW);
+    digitalWrite(9, LOW);
+  }
+  Serial.println(distancia);
+}
+  
+  
